@@ -1,0 +1,10 @@
+.creative-dropdown>.mdl-icon-toggle__label {
+    float:right;
+    margin-top:-30px;
+}
+.creative-dropdown>i.mdl-icon-toggle__label {
+    color: gray;
+}
+.creative-dropdown.is-focused>i.mdl-icon-toggle__label {
+    color: blue;
+}
