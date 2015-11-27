@@ -1,0 +1,37 @@
+{
+  "name": "getmdl-select",
+  "version": "1.0.0",
+  "description": "select for material-design-lite",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "material",
+    "design",
+    "styleguide",
+    "style",
+    "guide",
+    "mdl",
+    "getmdl",
+    "select",
+    "selection-dropdown",
+    "getmdl-select"
+  ],
+  "author": {
+    "name": "CreativeIT"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "bower": "^1.5.2",
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-babel": "^5.3.0"
+  },
+  "dependencies": {
+    "material-design-lite": "^1.0.4"
+  }
+}
