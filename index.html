@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi" ></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="lib/material.min.css">
+    <link rel="stylesheet" href="getmdl-select.min.css">
+    
+    <style>
+        body > div.demo-chart {
+            width: 880px;
+            margin-top: 10%;
+            margin-left: 25%;
+            
+        }
+        
+        body > div div {
+	    display: inline-block;
+	}
+	
+	p b, .creative-dropdown input {
+	    color: rgb(60,60,60);
+	    font-family: 'roboto';
+	}
+	
+	body > div .mdl-radio {
+	    width: 100%;
+	}
+	
+	body > div>div {
+	    padding-top:20px; 
+	    padding-left:80px; 
+	    width: 82%;
+        }
+        
+        body > div p {
+	    font-size:20px; 
+	    font-family: 'roboto';
+	    margin-bottom:0;
+	    padding-top:0px;
+	    padding-bottom:0;
+        }
+        
+        body > div>div>div {
+	    width: 100%;
+        }
+        
+        body > div label {
+	    font-size: 14px;
+	    font-family: "roboto";
+	    color: gray;
+        }
+        
+        body > div input {
+	    font-size: 16px;
+	    font-family: "roboto";
+        }
+    </style>
+
+</head>
+<body>
+        <div class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-color--white mdl-shadow--4dp">
+			<p><b>Floating label</b></p>
+			<div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label creative-dropdown">
+					<input class="mdl-textfield__input" value="Belarus" type="text" id="country" readonly tabIndex="-1"/>
+					<label class="mdl-textfield__label" for="country">Country</label>
+					<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
+						<li class="mdl-menu__item">Brazil</li>
+						<li class="mdl-menu__item">Germany</li>
+						<li class="mdl-menu__item">Russia</li>
+						<li class="mdl-menu__item">France</li>
+						<li class="mdl-menu__item">Belarus</li>
+						<li class="mdl-menu__item"></li>
+					</ul>
+					<i class="mdl-icon-toggle__label material-icons" onclick="alert('TODO: focus on click '+this.parentElement.tagName); this.parentElement.className = this.parentElement.className + ' is-focused';">keyboard_arrow_down</i>
+				</div>
+			</div>
+        </div>
+
+	<script src="lib/material.min.js"></script>
+	<script src="getmdl-select.min.js"></script>
+</body>
+</html>
