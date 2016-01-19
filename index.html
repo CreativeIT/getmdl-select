@@ -1,87 +1,373 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<!-- saved from url=(0051)http://www.getmdl.io/components/#textfields-section -->
+<html lang="en" class="mdl-js">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Design Lite</title>
 
-    <script type="text/javascript" src="https://www.google.com/jsapi" ></script>
+    <meta name="theme-color" content="#263238">
+
+    <link rel="shortcut icon" href="http://www.getmdl.io/assets/favicon.png">
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="lib/index_mdl/main.css">
+
+    <!-- Fonts -->
+    <link href="lib/index_mdl/css" rel="stylesheet" type="text/css">
+    <link href="lib/index_mdl/icon" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="lib/material.min.css">
     <link rel="stylesheet" href="getmdl-select.min.css">
-    
-    <style>
-        body > div.demo-chart {
-            width: 880px;
-            margin-top: 10%;
-            margin-left: 25%;
-            
-        }
-        
-        body > div div {
-	    display: inline-block;
-	}
-	
-	p b, .creative-dropdown input {
-	    color: rgb(60,60,60);
-	    font-family: 'roboto';
-	}
-	
-	body > div .mdl-radio {
-	    width: 100%;
-	}
-	
-	body > div>div {
-	    padding-top:20px; 
-	    padding-left:80px; 
-	    width: 82%;
-        }
-        
-        body > div p {
-	    font-size:20px; 
-	    font-family: 'roboto';
-	    margin-bottom:0;
-	    padding-top:0px;
-	    padding-bottom:0;
-        }
-        
-        body > div>div>div {
-	    width: 100%;
-        }
-        
-        body > div label {
-	    font-size: 14px;
-	    font-family: "roboto";
-	    color: gray;
-        }
-        
-        body > div input {
-	    font-size: 16px;
-	    font-family: "roboto";
-        }
-    </style>
-
 </head>
-<body>
-        <div class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-color--white mdl-shadow--4dp">
-			<p><b>Floating label</b></p>
-			<div>
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label creative-dropdown">
-					<input class="mdl-textfield__input" value="Belarus" type="text" id="country" readonly tabIndex="-1"/>
-					<label class="mdl-textfield__label" for="country">Country</label>
-					<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
-						<li class="mdl-menu__item">Brazil</li>
-						<li class="mdl-menu__item">Germany</li>
-						<li class="mdl-menu__item">Russia</li>
-						<li class="mdl-menu__item">France</li>
-						<li class="mdl-menu__item">Belarus</li>
-						<li class="mdl-menu__item"></li>
-					</ul>
-					<i class="mdl-icon-toggle__label material-icons" onclick="alert('TODO: focus on click '+this.parentElement.tagName); this.parentElement.className = this.parentElement.className + ' is-focused';">keyboard_arrow_down</i>
-				</div>
-			</div>
-        </div>
+<body class="components">
 
-	<script src="lib/material.min.js"></script>
-	<script src="getmdl-select.min.js"></script>
+<div class="image-preloader"></div>
+<div class="mdl-layout__container">
+    <div class="docs-layout mdl-layout mdl-js-layout is-upgraded" data-upgraded=",MaterialLayout">
+        <header class="docs-layout-header mdl-layout__header is-casting-shadow">
+            <div class="mdl-layout__header-row">
+                <span class="docs-layout-title mdl-layout-title"><a href="http://www.getmdl.io/">Material<br>Design<br>Lite</a></span>
+            </div>
+            <div class="docs-navigation__container">
+                <nav class="docs-navigation mdl-navigation">
+                    <a href="#" class="mdl-navigation__link components">Components</a>
+
+                    <div class="spacer"></div>
+                    <a href="#" class="mdl-navigation__link mdl-navigation__link--icon github"><i
+                            class="material-icons">link</i><span>GitHub</span></a>
+                    <a href="#" class="mdl-navigation__link mdl-navigation__link--icon download">
+                        <i class="material-icons"></i><span>Download</span>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab mdl-color--lime-A200"
+                                data-upgraded=",MaterialButton,MaterialRipple">
+                            <i class="material-icons"></i>
+                            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+                    </a>
+                </nav>
+            </div>
+            <i class="material-icons scrollindicator scrollindicator--right disabled"></i>
+            <i class="material-icons scrollindicator scrollindicator--left disabled"></i>
+        </header>
+        <main class="docs-layout-content mdl-layout__content mdl-color-text--grey-600">
+            <div class="content mdl-grid mdl-grid--no-spacing" id="content">
+                <div class="subpageheader mdl-cell--12-col">Components</div>
+
+                <link href="lib/index_mdl/components.css" rel="stylesheet">
+                <script src="lib/index_mdl/snippets.js"></script>
+
+
+                <div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
+                    <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
+
+                        <a href="#select" class="mdl-components__link mdl-component select is-active">
+                            <div class="mdl-components__link-image"
+                                 style="background-image: url(&#39;lib/index_mdl/comp_menus.png&#39;)">
+                            </div>
+                            <span class="mdl-components__link-text">Select</span>
+                        </a>
+
+                    </aside>
+                    <main class="mdl-components__pages">
+                        <!--
+                        <section id="index-section" class="mdl-components-index mdl-components__page">
+                             <div class="mdl-components-index-text mdl-grid">
+                                 <div class="mdl-components-text docs-text-styling about-panel about-panel&#45;&#45;text mdl-cell mdl-cell&#45;&#45;12-col">
+                                     <dl class="mdl-components-dl">
+                                         <dt class="mdl-components-dt">COMPONENTS</dt>
+                                         <dd class="mdl_components-dd">
+                                             Material Design Lite (MDL) is a library of components for web developers
+                                             based on Google's Material Design Philosophy: "A visual language for our
+                                             users that synthesizes the classic principles of good design with the
+                                             innovation and possibility of technology and science." Understanding the
+                                             goals and principles of Material Design is critical to the proper use of
+                                             the Material Design Lite components. If you have not yet read the
+                                             <a href="http://www.google.com/design/spec/material-design/introduction.html">Material Design Introduction</a>
+                                             you should do so before attempting to use the components.
+                                         </dd>
+                                     </dl>
+                                 </div>
+                             </div>
+                             <div class="mdl-components-img"></div>
+                         </section>
+                         -->
+
+
+                        <section id="select-section" class="mdl-components__page mdl-grid is-active">
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <div class="docs-text-styling component-title">
+                                    <h3>Select</h3>
+
+                                    <p>Select components.</p>
+                                </div>
+                                <!-- Generating snippets -->
+
+                                <div class="snippet-group">
+
+                                    <div class="snippet-header">
+                                        <div class="snippet-demos">
+                                            <div class="snippet-demo-padding"></div>
+
+                                            <div class="snippet-demo">
+                                                <div class="snippet-demo-container demo-textfield demo-textfield__textfield-text">
+                                                    <!-- Simple Select -->
+                                                    <form action="#">
+                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label creative-dropdown">
+                                                            <input id="sample1" class="mdl-textfield__input" value="Belarus" type="text" readonly tabIndex="-1"/>
+                                                            <label class="mdl-textfield__label" for="sample1">Country</label>
+                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="sample1">
+                                                                <li class="mdl-menu__item">Brazil</li>
+                                                                <li class="mdl-menu__item">Germany</li>
+                                                                <li class="mdl-menu__item">Russia</li>
+                                                                <li class="mdl-menu__item">France</li>
+                                                                <li class="mdl-menu__item">Belarus</li>
+                                                            </ul>
+
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="snippet-demo-padding"></div>
+                                        </div>
+                                    </div>
+                                    <div class="snippet-code">
+    <pre class=" codepen-button-enabled  language-markup">
+        <span
+                class=" language-markup"><span class="token comment"
+                                               spellcheck="true">&lt;!-- Simple Select --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label creative-dropdown<span
+                class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">type</span><span
+                    class="token attr-value"><span class="token punctuation">=</span><span
+                    class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
+                    class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                    class="token punctuation">"</span>sample1<span class="token punctuation">"</span></span> <span
+                    class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                    class="token punctuation">"</span>Belarus<span class="token punctuation">"</span></span> <span
+                    class="token attr-name">readonly</span> <span
+                    class="token attr-name">tabIndex</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                    class="token punctuation">"</span>-1<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                    class="token attr-name">for</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>sample1<span
+                    class="token punctuation">"</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
+                    class="token punctuation">"</span></span></span><span
+                    class="token punctuation">&gt;</span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
+                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
+                    class="token attr-name">for</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>sample1<span
+                    class="token punctuation">"</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span><!-- li-->
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                        class="token attr-name">class</span><span class="token attr-value"><span
+                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                        class="token punctuation">"</span></span><span
+                        class="token punctuation">&gt;</span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                        class="token attr-name">class</span><span class="token attr-value"><span
+                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                        class="token punctuation">"</span></span><span
+                        class="token punctuation">&gt;</span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                        class="token attr-name">class</span><span class="token attr-value"><span
+                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                        class="token punctuation">"</span></span><span
+                        class="token punctuation">&gt;</span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">&gt;</span></span><span class="token tag">
+            <span class="token punctuation">&lt;/</span>ul<span
+                    class="token punctuation">&gt;</span>
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
+                    class="token punctuation">&gt;</span></span></span>
+        </code>
+        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="snippet-group">
+
+                                    <div class="snippet-header">
+                                        <div class="snippet-demos">
+                                            <div class="snippet-demo-padding"></div>
+
+                                            <div class="snippet-demo">
+                                                <div class="snippet-demo-container demo-textfield demo-textfield__textfield-text">
+                                                    <!-- Simple Textfield -->
+                                                    <form action="#">
+                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label creative-dropdown">
+                                                            <input id="sample2" class="mdl-textfield__input" value="Belarus" type="text" readonly tabIndex="-1"/>
+                                                            <label for="sample2">
+                                                                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                                            </label>
+                                                            <label class="mdl-textfield__label" for="sample2">Country</label>
+                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="sample2">
+                                                                <li class="mdl-menu__item">Brazil</li>
+                                                                <li class="mdl-menu__item">Germany</li>
+                                                                <li class="mdl-menu__item">Russia</li>
+                                                                <li class="mdl-menu__item">France</li>
+                                                                <li class="mdl-menu__item">Belarus</li>
+                                                            </ul>
+
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="snippet-demo-padding"></div>
+                                        </div>
+                                    </div>
+                                    <div class="snippet-code">
+    <pre class=" codepen-button-enabled  language-markup">
+        <code
+                class=" language-markup"><span class="token comment"
+                                               spellcheck="true">&lt;!-- Select --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label creative-dropdown<span
+                class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">type</span><span
+                    class="token attr-value"><span class="token punctuation">=</span><span
+                    class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
+                    class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                    class="token punctuation">"</span>sample2<span class="token punctuation">"</span></span> <span
+                    class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                    class="token punctuation">"</span>Belarus<span class="token punctuation">"</span></span> <span
+                    class="token attr-name">readonly</span> <span
+                    class="token attr-name">tabIndex</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                    class="token punctuation">"</span>-1<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                    class="token attr-name">for</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>sample2<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-icon-toggle__label material-icons<span
+                    class="token punctuation">"</span><span
+                    class="token punctuation">&gt;</span></span>keyboard_arrow_down<span class="token tag"><span class="token punctuation">&lt;/</span>i<span
+                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span
+                    class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                    class="token attr-name">for</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>sample2<span
+                    class="token punctuation">"</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span>Country</span><span class="token punctuation">&lt;/</span>label</span><span
+                    class="token punctuation">&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
+                    class="token attr-name">for</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>sample2<span
+                    class="token punctuation">"</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span><!-- li-->
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                        class="token attr-name">class</span><span class="token attr-value"><span
+                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                        class="token punctuation">"</span></span><span
+                        class="token punctuation">&gt;</span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                        class="token attr-name">class</span><span class="token attr-value"><span
+                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                        class="token punctuation">"</span></span><span
+                        class="token punctuation">&gt;</span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                        class="token attr-name">class</span><span class="token attr-value"><span
+                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                        class="token punctuation">"</span></span><span
+                        class="token punctuation">&gt;</span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">&gt;</span></span><span class="token tag">
+            <span class="token punctuation">&lt;/</span>ul<span
+                    class="token punctuation">&gt;</span>
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
+                    class="token punctuation">&gt;</span></span>
+            </span>
+        </code>
+        </pre>
+                                    </div></div>
+
+
+                                <!-- Adding the demo page -->
+
+
+                                <script>
+
+                                </script>
+
+
+                                <div class="docs-text-styling docs-readme">
+
+
+                                    <h2 id="introduction">Introduction</h2>
+
+                                    <p>The <strong>select</strong> component is an
+                                        enhanced version of the standard HTML <code>&lt;input type="text"&gt;</code> and
+                                        element. A select consists of dropdown menu....
+                                        </p>
+
+
+
+                                </div>
+
+                            </div>
+                        </section>
+                    </main>
+                </div>
+
+
+            </div>
+            <section class="docs-text-styling download mdl-color--grey-800">
+                <a href="#download" class="mdl-color-text--grey-50">Download</a>
+            </section>
+            <footer class="docs-text-styling docs-footer mdl-mini-footer mdl-color--grey-900">
+                <ul>
+                    <li class="mdl-mini-footer--social-btn">
+                        <a href="#" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
+                    </li>
+                    <li class="mdl-mini-footer--social-btn">
+                        <a href="#" class="social-btn social-btn__github" role="button" title="GitHub"></a>
+                    </li>
+                    <li class="mdl-mini-footer--social-btn">
+                        <a href="#" class="social-btn social-btn__gplus" role="button" title="Google+"></a>
+                    </li>
+                </ul>
+            </footer>
+        </main>
+    </div>
+</div>
+
+
+<script src="lib/material.min.js"></script>
+<script src="src/js/dropdown.js"></script>
+<script src="lib/index_mdl/main.js"></script>
+
 </body>
 </html>
