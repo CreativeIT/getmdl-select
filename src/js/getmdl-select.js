@@ -1,7 +1,7 @@
 {
     'use strict';
     window.onload = function () {
-        var dropdowns = document.querySelectorAll('.creative-dropdown');
+        var dropdowns = document.querySelectorAll('.getmdl-select');
         [].forEach.call(dropdowns, function (i) {
             addEventListeners(i);
         })
