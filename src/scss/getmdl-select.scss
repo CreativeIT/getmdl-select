@@ -3,12 +3,12 @@
     .mdl-icon-toggle__label {
         float:right;
         margin-top:-30px;
-        color: gray;
+        color: rgba(0, 0, 0, 0.4);
     }
 
     &.is-focused{
-        i.mdl-icon-toggle__label{
-            color: blue;
+        .mdl-icon-toggle__label{
+            color: #3f51b5;
         }
     }
 
