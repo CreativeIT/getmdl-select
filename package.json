@@ -4,7 +4,7 @@
   "description": "select for material-design-lite",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/CreativeIT/getmdl-select.git"
   },
   "keywords": [
     "material",
@@ -33,5 +33,6 @@
   },
   "dependencies": {
     "material-design-lite": "^1.0.4"
-  }
+  },
+  "license": "ISC"
 }
