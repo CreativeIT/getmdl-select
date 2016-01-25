@@ -11,7 +11,7 @@ Check out the [example](http://creativeit.github.io/getmdl-select/)
 ## Basic use
 To use any MDL component, you must include the minified CSS and JavaScript files using standard relative-path references in the `<head>` section of the page, as described in the MDL Introduction.
 
-#### Example
+### Example
 
 Select field.
  ```html
@@ -21,11 +21,15 @@ Select field.
         <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
           <li class="mdl-menu__item">Belarus</li>
           <li class="mdl-menu__item">Russia</li>
-          ...
         </ul>
     </div>
  ```
     
+## Install
+
+ * [Bower](http://bower.io/): `bower install getmdl-select`
+ * [npm](http://npmjs.org/): `npm install getmdl-select`
+ 
 ### Download / Clone
 
 Clone the repo using Git:

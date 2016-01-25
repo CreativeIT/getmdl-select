@@ -4,7 +4,7 @@
   "description": "select for material-design-lite",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CreativeIT/getmdl-select.git"
+    "url": "git+https://github.com/CreativeIT/getmdl-select.git"
   },
   "keywords": [
     "material",
@@ -18,10 +18,8 @@
     "selection-dropdown",
     "getmdl-select"
   ],
-  "author": {
-    "name": "CreativeIT"
-  },
-  "homepage": "",
+  "author": "CreativeIT",
+  "homepage": "https://github.com/CreativeIT/getmdl-select#readme",
   "devDependencies": {
     "bower": "^1.5.2",
     "gulp": "^3.9.0",
