@@ -15,6 +15,13 @@
         [].forEach.call(list, function (li) {
             li.onclick = function () {
                 input.value = li.textContent;
+                if ("createEvent" in document) {
+                    var evt = document.createEvent("HTMLEvents");
+                    evt.initEvent("change", false, true);
+                    input.dispatchEvent(evt);
+                } else {
+                    input.fireEvent("onchange");
+                }
             }
         });
     };
