@@ -8,15 +8,12 @@
   },
   "keywords": [
     "material",
-    "design",
-    "styleguide",
-    "style",
-    "guide",
     "mdl",
     "getmdl",
     "select",
-    "selection-dropdown",
-    "getmdl-select"
+    "getmdl-select",
+    "dropdown",
+    "getmdl-dropdown"
   ],
   "author": "CreativeIT",
   "homepage": "https://github.com/CreativeIT/getmdl-select#readme",

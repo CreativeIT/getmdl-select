@@ -10,16 +10,13 @@
   ],
   "license": "MIT",
   "keywords": [
-    "getmdl-select",
     "material",
-    "design",
-    "styleguide",
-    "style",
-    "guide",
     "mdl",
     "getmdl",
     "select",
-    "selection-dropdown"
+    "getmdl-select",
+    "dropdown",
+    "getmdl-dropdown"
   ],
   "homepage": "https://github.com/CreativeIT/getmdl-select",
   "moduleType": [
