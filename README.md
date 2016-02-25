@@ -10,6 +10,15 @@ Check out the [example](http://creativeit.github.io/getmdl-select/)
 
 ## Basic use
 To use any MDL component, you must include the minified CSS and JavaScript files using standard relative-path references in the `<head>` section of the page, as described in the MDL Introduction.
+   ```html
+   <!-- getmdl -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+   <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
+   <!--getmdl-select-->
+   <script src="getmdl-select.min.js"></script>
+   <link rel="stylesheet" href="getmdl-select.min.css">
+   ```
 
 ### Example
 
