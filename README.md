@@ -33,6 +33,9 @@ Select field.
         </ul>
     </div>
  ```
+ 
+### Dynamically usage
+For dynamically usage, you must add `getmdlSelect.init(container)`, where container is div block (for example `<div class='getmdl-select'></div>`), when you create new element. 
     
 ## Install
 
