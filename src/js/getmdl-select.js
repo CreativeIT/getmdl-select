@@ -1,14 +1,14 @@
 {
     'use strict';
     window.onload = function () {
-        getmdlSelect.init(document);
+        getmdlSelect.init('.getmdl-select');
         document.addEventListener("DOMNodeInserted", function (ev) {
             componentHandler.upgradeDom();
         }, false);
     };
 
     var getmdlSelect = {
-        addEventListeners : function (dropdown) {
+        addEventListeners: function (dropdown) {
             var input = dropdown.querySelector('input');
             var list = dropdown.querySelectorAll('li');
 
@@ -25,16 +25,12 @@
                 }
             });
         },
-        init: function (dropdown) {
-            if(dropdown.classList && dropdown.classList.contains('getmdl-select')) {
-                this.addEventListeners(dropdown);
-            }
-            else{
-                var dropdowns = dropdown.querySelectorAll('.getmdl-select');
-                [].forEach.call(dropdowns, function (i) {
-                    getmdlSelect.addEventListeners(i);
-                });
-            }
+        init: function (selector) {
+            var dropdowns = document.querySelectorAll(selector);
+            [].forEach.call(dropdowns, function (i) {
+                getmdlSelect.addEventListeners(i);
+            });
+
         }
     };
 }

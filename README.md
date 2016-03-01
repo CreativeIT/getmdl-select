@@ -35,7 +35,7 @@ Select field.
  ```
  
 ### Dynamically usage
-For dynamically usage, you must add `getmdlSelect.init(container)`, where container is div block (for example `<div class='getmdl-select'></div>`), when you create new element. 
+For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created. 
     
 ## Install
 
