@@ -1,5 +1,6 @@
 {
   "name": "getmdl-select",
+  "version": "1.0.3",
   "description": "select component like native mdl menu",
   "main": [
     "getmdl-select.min.css",
