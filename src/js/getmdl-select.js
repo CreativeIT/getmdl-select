@@ -29,8 +29,8 @@
             var dropdowns = document.querySelectorAll(selector);
             [].forEach.call(dropdowns, function (i) {
                 getmdlSelect.addEventListeners(i);
+                i.style.width = i.querySelector('.mdl-menu').clientWidth + 'px';
             });
-
         }
     };
 }
