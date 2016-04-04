@@ -1,22 +1,20 @@
 .getmdl-select {
 
+  .mdl-icon-toggle__label {
+    float: right;
+    margin-top: -30px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  &.is-focused {
     .mdl-icon-toggle__label {
-        float:right;
-        margin-top:-30px;
-        color: rgba(0, 0, 0, 0.4);
+      color: #3f51b5;
     }
+  }
 
-    &.is-focused{
-        .mdl-icon-toggle__label{
-            color: #3f51b5;
-        }
+  .mdl-menu__container {
+    width: 100% !important;
+    .mdl-menu .mdl-menu__item {
+      font-size: 16px;
     }
-
-    .mdl-menu__container {
-	width: 100% !important;
-
-	.mdl-menu {
-	    width: 100%;
-	}
-    }
+  }
 }
