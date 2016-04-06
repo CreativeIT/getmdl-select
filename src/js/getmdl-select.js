@@ -14,6 +14,12 @@
 
             [].forEach.call(list, function (li) {
                 li.onclick = function () {
+
+                    // Add "is-dirty" class if not present, so placeholder disappears
+                    if (!/( |^)is-dirty( |$)/.test(dropdown.className)) {
+                        dropdown.className += " is-dirty";
+                    }
+
                     input.value = li.textContent;
                     if ("createEvent" in document) {
                         var evt = document.createEvent("HTMLEvents");
