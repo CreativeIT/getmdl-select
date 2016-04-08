@@ -12,12 +12,10 @@
             var input = dropdown.querySelector('input');
             var list = dropdown.querySelectorAll('li');
 
-            var mdlTextField = new MaterialTextfield(dropdown);
-
             [].forEach.call(list, function (li) {
                 li.onclick = function () {
 
-                    mdlTextField.change(li.textContent); // handles css class changes
+                    dropdown.MaterialTextfield.change(li.textContent); // handles css class changes
 
                     if ("createEvent" in document) {
                         var evt = document.createEvent("HTMLEvents");
