@@ -1,23 +1,38 @@
 {
     'use strict';
     window.onload = function () {
-        var dropdowns = document.querySelectorAll('.getmdl-select');
-        [].forEach.call(dropdowns, function (i) {
-            addEventListeners(i);
-        })
+        getmdlSelect.init('.getmdl-select');
+        document.addEventListener("DOMNodeInserted", function (ev) {
+            componentHandler.upgradeDom();
+        }, false);
     };
 
-    var addEventListeners = function (dropdown) {
-        var input = dropdown.querySelector('input');
-        var list = dropdown.querySelectorAll('li');
-        var icon = dropdown.querySelector('i');
+    var getmdlSelect = {
+        addEventListeners: function (dropdown) {
+            var input = dropdown.querySelector('input');
+            var list = dropdown.querySelectorAll('li');
 
-        [].forEach.call(list, function (li) {
-            li.onclick = function () {
-                input.value = li.textContent;
-            }
-        });
+            [].forEach.call(list, function (li) {
+                li.onclick = function () {
+
+                    dropdown.MaterialTextfield.change(li.textContent); // handles css class changes
+
+                    if ("createEvent" in document) {
+                        var evt = document.createEvent("HTMLEvents");
+                        evt.initEvent("change", false, true);
+                        input.dispatchEvent(evt);
+                    } else {
+                        input.fireEvent("onchange");
+                    }
+                }
+            });
+        },
+        init: function (selector) {
+            var dropdowns = document.querySelectorAll(selector);
+            [].forEach.call(dropdowns, function (i) {
+                getmdlSelect.addEventListeners(i);
+                i.style.width = i.querySelector('.mdl-menu').clientWidth + 'px';
+            });
+        }
     };
-
-
 }

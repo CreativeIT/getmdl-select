@@ -10,8 +10,17 @@ Check out the [example](http://creativeit.github.io/getmdl-select/)
 
 ## Basic use
 To use any MDL component, you must include the minified CSS and JavaScript files using standard relative-path references in the `<head>` section of the page, as described in the MDL Introduction.
+   ```html
+   <!-- getmdl -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+   <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
+   <!--getmdl-select-->
+   <script src="getmdl-select.min.js"></script>
+   <link rel="stylesheet" href="getmdl-select.min.css">
+   ```
 
-#### Example
+### Example
 
 Select field.
  ```html
@@ -21,11 +30,18 @@ Select field.
         <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
           <li class="mdl-menu__item">Belarus</li>
           <li class="mdl-menu__item">Russia</li>
-          ...
         </ul>
     </div>
  ```
+ 
+### Dynamically usage
+For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created. 
     
+## Install
+
+ * [Bower](http://bower.io/): `bower install getmdl-select`
+ * [npm](http://npmjs.org/): `npm install getmdl-select`
+ 
 ### Download / Clone
 
 Clone the repo using Git:
