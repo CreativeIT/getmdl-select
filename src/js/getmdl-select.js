@@ -16,6 +16,9 @@
                 li.onclick = function () {
 
                     dropdown.MaterialTextfield.change(li.textContent); // handles css class changes
+                    
+                    // update input with the "id" value
+                    input.dataset.val = li.dataset.val || '';
 
                     if ("createEvent" in document) {
                         var evt = document.createEvent("HTMLEvents");
