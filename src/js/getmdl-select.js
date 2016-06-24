@@ -16,7 +16,10 @@
                 li.onclick = function () {
 
                     dropdown.MaterialTextfield.change(li.textContent); // handles css class changes
-                    
+                    setTimeout( function() {
+                        dropdown.MaterialTextfield.updateClasses_(); //update css class
+                    }, 250 );
+
                     // update input with the "id" value
                     input.dataset.val = li.dataset.val || '';
 
