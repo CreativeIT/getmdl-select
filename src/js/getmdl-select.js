@@ -35,10 +35,10 @@
 
             // In case the selector is an id
             if( selector.substring(0,1) == '#' ) {
-              var dropdown = document.getElementById(selector.substring(1));
-              !! dropdown && dropdowns.push(dropdown);
+                var dropdown = document.getElementById(selector.substring(1));
+                !! dropdown && dropdowns.push(dropdown);
             } else {
-              dropdowns = document.querySelectorAll(selector);
+                dropdowns = document.querySelectorAll(selector);
             }
 
             [].forEach.call(dropdowns, function (i) {
