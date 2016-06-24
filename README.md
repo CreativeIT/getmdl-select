@@ -36,6 +36,9 @@ Select field.
  
 ### Dynamically usage
 For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created. 
+
+### Width
+Select automatically adapt to the maximum width of values. If you want to use the default width, add class `getmdl-select__fullwidth`.
     
 ## Install
 
