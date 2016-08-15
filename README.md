@@ -61,3 +61,6 @@ dependencies, from the root of the project:
 ```bash
 npm install 
 ```
+
+## LICENSE
+See the [LICENSE file](https://github.com/CreativeIT/getmdl-select/blob/master/LICENSE.txt) for license rights and limitations (MIT).
