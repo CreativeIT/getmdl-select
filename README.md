@@ -37,8 +37,12 @@ Select field.
 ### Dynamically usage
 For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created. 
 
-### Width
+### Other features
+#### Width
 Select automatically adapt to the maximum width of values. If you want to use the default width, add class `getmdl-select__fullwidth`.
+
+#### Height
+Select automatically adapt to the maximum height. If you want to use small height (300px) and see scroll bar, add class `getmdl-select__fix-height`.    
     
 ## Install
 
