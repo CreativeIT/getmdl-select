@@ -16,7 +16,7 @@ To use any MDL component, you must include the minified CSS and JavaScript files
    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
    <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
    <!--getmdl-select-->
-   <script src="getmdl-select.min.js"></script>
+   <script defer src="getmdl-select.min.js"></script>
    <link rel="stylesheet" href="getmdl-select.min.css">
    ```
 
