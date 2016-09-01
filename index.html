@@ -95,7 +95,7 @@
                                                 <div class="snippet-demo-container">
                                                     <!-- Simple Select -->
                                                     <form action="#">
-                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
                                                             <input id="sample1" class="mdl-textfield__input" value="Belarus" type="text" readonly tabIndex="-1"/>
                                                             <label class="mdl-textfield__label" for="sample1">Country</label>
                                                             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="sample1">
@@ -121,7 +121,7 @@
                                                spellcheck="true">&lt;!-- Simple Select --&gt;</span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
                 class="token attr-name">class</span><span class="token attr-value"><span
-                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select<span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth<span
                 class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
                     class="token attr-name">class</span><span class="token attr-value"><span
@@ -191,18 +191,21 @@
                                                 <div class="snippet-demo-container">
 
                                                     <form action="#">
-                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
                                                             <input id="sample2" class="mdl-textfield__input" value="Belarus" type="text" readonly tabIndex="-1"/>
                                                             <label for="sample2">
                                                                 <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
                                                             </label>
                                                             <label class="mdl-textfield__label" for="sample2">Country</label>
                                                             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="sample2">
-                                                                <li class="mdl-menu__item">Brazil</li>
-                                                                <li class="mdl-menu__item">Germany</li>
-                                                                <li class="mdl-menu__item">Russia</li>
-                                                                <li class="mdl-menu__item">France</li>
-                                                                <li class="mdl-menu__item">Belarus</li>
+                                                                <li class="mdl-menu__item" data-val="BR">Brazil</li>
+                                                                <li class="mdl-menu__item" data-val="DE">Germany</li>
+                                                                <li class="mdl-menu__item" data-val="RU">Russia</li>
+                                                                <li class="mdl-menu__item" data-val="FR">France</li>
+                                                                <li class="mdl-menu__item" data-val="BY">Belarus</li>
+                                                                <li class="mdl-menu__item" data-val="ES">Estonia</li>
+                                                                <li class="mdl-menu__item" data-val="FI">Finland</li>
+                                                                <li class="mdl-menu__item" data-val="PL">Poland</li>
                                                             </ul>
 
                                                         </div>
@@ -219,7 +222,7 @@
                                                spellcheck="true">&lt;!-- Select with arrow--&gt;</span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
                 class="token attr-name">class</span><span class="token attr-value"><span
-                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select<span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height<span
                 class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
                     class="token attr-name">class</span><span class="token attr-value"><span
@@ -268,19 +271,22 @@
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
                         class="token attr-name">class</span><span class="token attr-value"><span
                         class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span><span
+                        class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                  class="token attr-value"><span class="token punctuation">="</span>DE<span class="token punctuation">"</span></span><span
                         class="token punctuation">&gt;</span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
                     class="token punctuation">&gt;</span></span>
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
                         class="token attr-name">class</span><span class="token attr-value"><span
                         class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span><span
+                        class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                  class="token attr-value"><span class="token punctuation">="</span>BY<span class="token punctuation">"</span></span><span
                         class="token punctuation">&gt;</span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
                     class="token punctuation">&gt;</span></span>
                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
                         class="token attr-name">class</span><span class="token attr-value"><span
                         class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span><span
+                        class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                  class="token attr-value"><span class="token punctuation">="</span>RU<span class="token punctuation">"</span></span><span
                         class="token punctuation">&gt;</span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
                     class="token punctuation">&gt;</span></span><span class="token tag">
             <span class="token punctuation">&lt;/</span>ul<span
@@ -308,6 +314,32 @@
                                     <p>The <strong>select</strong> component is an
                                         enhanced version of the standard HTML <code>&lt;input type="text"&gt;</code>. A text field consists of a horizontal line indicating where select item displayed and and native mdl menu. The <strong>select</strong> component has mdl menu style.
                                         </p>
+
+                                  <h2 id="configuration-options">Configuration options</h2>
+                                  <p>The MDL CSS classes apply various predefined visual and behavioral enhancements to the select. The table below lists the available classes and their effects.</p>
+
+                                  <table>
+                                    <thead>
+                                    <tr>
+                                      <th>MDL class</th>
+                                      <th>Effect</th>
+                                      <th>Remarks</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <td><code>getmdl-select__fullwidth</code></td>
+                                      <td>Change auto width to default 300px</td>
+                                      <td>Required</td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>getmdl-select__fix-height</code></td>
+                                      <td>Limits height to 300px and add vertically scrollbar</td>
+                                      <td>Required</td>
+                                    </tr>
+
+                                    </tbody>
+                                  </table>
 
 
 
