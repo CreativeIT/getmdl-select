@@ -15,9 +15,9 @@ To use any MDL component, you must include the minified CSS and JavaScript files
    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
    <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
-   <!--getmdl-select-->
-   <script defer src="getmdl-select.min.js"></script>
-   <link rel="stylesheet" href="getmdl-select.min.css">
+   <!--getmdl-select-->   
+   <link rel="stylesheet" href="https://cdn.rawgit.com/CreativeIT/getmdl-select/master/getmdl-select.min.css">
+   <script defer src="https://cdn.rawgit.com/CreativeIT/getmdl-select/master/getmdl-select.min.js"></script>
    ```
 
 ### Example
@@ -35,7 +35,7 @@ Select field.
  ```
 
 
-## Additional 
+## Configuration options 
 #### Dynamically usage
 For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created. 
 
