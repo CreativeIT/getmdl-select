@@ -13,8 +13,7 @@
 
   .mdl-menu__container {
     width: 100% !important;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     .mdl-menu .mdl-menu__item {
       font-size: 16px;
     }
@@ -28,6 +27,7 @@
 
 .getmdl-select__fix-height{
   .mdl-menu__container{
+    overflow-y: auto;
     max-height: 300px !important;
   }
 }

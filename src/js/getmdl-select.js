@@ -10,6 +10,9 @@
     };
 
     var getmdlSelect = {
+        defaultValue : {
+            width: 300
+        },
         addEventListeners: function (dropdown) {
             var input = dropdown.querySelector('input');
             var list = dropdown.querySelectorAll('li');
@@ -50,11 +53,12 @@
                 };
             });
         },
-        init: function (selector) {
+        init: function (selector, widthDef) {
             var dropdowns = document.querySelectorAll(selector);
             [].forEach.call(dropdowns, function (i) {
                 getmdlSelect.addEventListeners(i);
-                i.style.width = i.querySelector('.mdl-menu').clientWidth + 'px';
+                var width = widthDef ? widthDef : (i.querySelector('.mdl-menu').offsetWidth ? i.querySelector('.mdl-menu').offsetWidth : getmdlSelect.defaultValue.width);
+                i.style.width = width + 'px';
             });
         }
     };
