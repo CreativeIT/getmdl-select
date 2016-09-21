@@ -18,7 +18,12 @@
             var list = dropdown.querySelectorAll('li');
             var menu = dropdown.querySelector('.mdl-js-menu');
 
-            //show menu on mouse down or mouse up
+            //show menu on input click
+            input.onclick = function (event) {
+                menu['MaterialMenu'].show();
+            };
+            
+            //show menu on arrow down or arrow up
             input.onkeydown = function (event) {
                 if (event.keyCode == 38 || event.keyCode == 40) {
                     menu['MaterialMenu'].show();
