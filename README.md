@@ -25,7 +25,7 @@ To use any MDL component, you must include the minified CSS and JavaScript files
 Select field.
  ```html
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-      <input class="mdl-textfield__input" value="Belarus" type="text" id="country" readonly tabIndex="-1" data-val="BLR"/>
+      <input class="mdl-textfield__input" id="country" name="country" value="Belarus" type="text" readonly tabIndex="-1" data-val="BLR"/>
         <label class="mdl-textfield__label" for="country">Country</label>
         <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
           <li class="mdl-menu__item" data-val="BLR">Belarus</li>
@@ -40,7 +40,7 @@ Select field.
 For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created. 
 
 #### Width
-Select automatically adapt to the maximum width of values. If you want to use the default width, add class `getmdl-select__fullwidth`.
+Initial Select takes the default width (300px). If you want that Select automatically adapt to the maximum width add class `getmdl-select__fullwidth`.
 
 #### Height
 Select automatically adapt to the maximum height. If you want to use small height (300px) and see scroll bar, add class `getmdl-select__fix-height`.    
