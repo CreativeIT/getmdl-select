@@ -53,12 +53,10 @@
                 };
             });
         },
-        init: function (selector, widthDef) {
+        init: function (selector) {
             var dropdowns = document.querySelectorAll(selector);
             [].forEach.call(dropdowns, function (i) {
                 getmdlSelect.addEventListeners(i);
-                var width = widthDef ? widthDef : (i.querySelector('.mdl-menu').offsetWidth ? i.querySelector('.mdl-menu').offsetWidth : getmdlSelect.defaultValue.width);
-                i.style.width = width + 'px';
             });
         }
     };
