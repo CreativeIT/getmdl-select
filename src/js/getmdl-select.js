@@ -1,13 +1,14 @@
 {
     'use strict';
-    window.onload = function () {
+
+    window.addEventListener('load', function () {
         getmdlSelect.init('.getmdl-select');
         document.addEventListener("DOMNodeInserted", function (ev) {
             if (ev.relatedNode.querySelectorAll(".getmdl-select").length > 0) {
                 componentHandler.upgradeDom();
             }
         }, false);
-    };
+    });
 
     var getmdlSelect = {
         defaultValue : {
@@ -31,7 +32,7 @@
                     input.focus();
                 }
             };
-            
+
             [].forEach.call(list, function (li) {
                 li.onclick = function () {
                     input.value = li.textContent;
