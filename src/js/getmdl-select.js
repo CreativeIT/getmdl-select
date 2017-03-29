@@ -47,7 +47,7 @@
                     if ("createEvent" in document) {
                         var evt = document.createEvent("HTMLEvents");
                         evt.initEvent("change", false, true);
-                        menu['MaterialMenu'].hide()
+                        menu['MaterialMenu'].hide();
                         input.dispatchEvent(evt);
                     } else {
                         input.fireEvent("onchange");
@@ -55,10 +55,12 @@
                 };
             });
         },
-        init: function (selector) {
+        init: function (selector, widthDef) {
             var dropdowns = document.querySelectorAll(selector);
             [].forEach.call(dropdowns, function (i) {
                 getmdlSelect.addEventListeners(i);
+                var width = widthDef ? widthDef : (i.querySelector('.mdl-menu').offsetWidth ? i.querySelector('.mdl-menu').offsetWidth : getmdlSelect.defaultValue.width);
+                i.style.width = width + 'px';
             });
         }
     };
