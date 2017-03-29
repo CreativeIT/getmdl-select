@@ -1,14 +1,13 @@
 {
     'use strict';
-
-    window.addEventListener('load', function () {
+    window.onload = function () {
         getmdlSelect.init('.getmdl-select');
         document.addEventListener("DOMNodeInserted", function (ev) {
             if (ev.relatedNode.querySelectorAll(".getmdl-select").length > 0) {
                 componentHandler.upgradeDom();
             }
         }, false);
-    });
+    };
 
     var getmdlSelect = {
         defaultValue : {
