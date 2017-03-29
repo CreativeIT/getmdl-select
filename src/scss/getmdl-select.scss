@@ -19,8 +19,10 @@
     }
   }
 }
-.getmdl-select__fullwidth, .mdl-menu {
-  width: 100%;
+.getmdl-select__fullwidth {
+  .mdl-menu {
+    width: 100%;
+  }
 }
 
 .getmdl-select__fix-height{
