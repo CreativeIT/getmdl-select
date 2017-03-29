@@ -47,6 +47,7 @@
                     if ("createEvent" in document) {
                         var evt = document.createEvent("HTMLEvents");
                         evt.initEvent("change", false, true);
+                        menu['MaterialMenu'].hide()
                         input.dispatchEvent(evt);
                     } else {
                         input.fireEvent("onchange");
