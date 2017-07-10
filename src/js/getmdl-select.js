@@ -34,7 +34,7 @@
 
             [].forEach.call(list, function (li) {
                 li.onclick = function () {
-                    input.value = li.textContent;
+                    input.value = li.textContent.trim();
                     input.setAttribute( 'data-value', li.getAttribute('data-value') );
                     dropdown.MaterialTextfield.change(li.textContent); // handles css class changes
                     setTimeout( function() {
