@@ -1,6 +1,10 @@
 {
     'use strict';
-    window.onload = function () {
+    window.addEventListener ? 
+    window.addEventListener("load",whenLoaded,false) : 
+    window.attachEvent && window.attachEvent("onload",whenLoaded);
+
+    function whenLoaded() {
         getmdlSelect.init('.getmdl-select');
         document.addEventListener("DOMNodeInserted", function (ev) {
             if (ev.relatedNode.querySelectorAll(".getmdl-select").length > 0) {
