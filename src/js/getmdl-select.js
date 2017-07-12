@@ -1,9 +1,5 @@
-{
-    'use strict';
-    window.addEventListener ? 
-    window.addEventListener("load",whenLoaded,false) : 
-    window.attachEvent && window.attachEvent("onload",whenLoaded);
-
+'use strict';
+(function () {
     function whenLoaded() {
         getmdlSelect.init('.getmdl-select');
         document.addEventListener("DOMNodeInserted", function (ev) {
@@ -12,6 +8,10 @@
             }
         }, false);
     };
+
+    window.addEventListener ? 
+    window.addEventListener("load",whenLoaded,false) : 
+    window.attachEvent && window.attachEvent("onload",whenLoaded);
 
     var getmdlSelect = {
         defaultValue : {
@@ -22,11 +22,6 @@
             var list = dropdown.querySelectorAll('li');
             var menu = dropdown.querySelector('.mdl-js-menu');
 
-            //show menu on input click
-            input.onclick = function (event) {
-                menu['MaterialMenu'].show();
-            };
-            
             //show menu on arrow down or arrow up
             input.onkeydown = function (event) {
                 if (event.keyCode == 38 || event.keyCode == 40) {
@@ -45,7 +40,6 @@
                 li.onclick = function () {
                     var value = li.textContent.trim();
                     input.value = value;
-                    input.setAttribute('data-value', li.getAttribute('data-value'));
                     dropdown.MaterialTextfield.change(value); // handles css class changes
                     setTimeout( function() {
                         dropdown.MaterialTextfield.updateClasses_(); //update css class
@@ -74,4 +68,4 @@
             });
         }
     };
-}
+}());
