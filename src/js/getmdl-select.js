@@ -1,23 +1,21 @@
-'use strict';
-(function () {
-    function whenLoaded() {
-        getmdlSelect.init('.getmdl-select');
-        document.addEventListener("DOMNodeInserted", function (ev) {
-            if (ev.relatedNode.querySelectorAll(".getmdl-select").length > 0) {
-                componentHandler.upgradeDom();
-            }
-        }, false);
-    };
+{
+    'use strict';
+    (function () {
+        function whenLoaded() {
+            getmdlSelect.init('.getmdl-select');
+        };
 
-    window.addEventListener ? 
-    window.addEventListener("load",whenLoaded,false) : 
-    window.attachEvent && window.attachEvent("onload",whenLoaded);
+        window.addEventListener ?
+            window.addEventListener("load", whenLoaded, false) :
+            window.attachEvent && window.attachEvent("onload", whenLoaded);
+
+    }());
 
     var getmdlSelect = {
-        defaultValue : {
+        _defaultValue: {
             width: 300
         },
-        addEventListeners: function (dropdown) {
+        _addEventListeners: function (dropdown) {
             var input = dropdown.querySelector('input');
             var list = dropdown.querySelectorAll('li');
             var menu = dropdown.querySelector('.mdl-js-menu');
@@ -41,9 +39,9 @@
                     var value = li.textContent.trim();
                     input.value = value;
                     dropdown.MaterialTextfield.change(value); // handles css class changes
-                    setTimeout( function() {
+                    setTimeout(function () {
                         dropdown.MaterialTextfield.updateClasses_(); //update css class
-                    }, 250 );
+                    }, 250);
 
                     // update input with the "id" value
                     input.dataset.val = li.dataset.val || '';
@@ -62,10 +60,12 @@
         init: function (selector, widthDef) {
             var dropdowns = document.querySelectorAll(selector);
             [].forEach.call(dropdowns, function (i) {
-                getmdlSelect.addEventListeners(i);
-                var width = widthDef ? widthDef : (i.querySelector('.mdl-menu').offsetWidth ? i.querySelector('.mdl-menu').offsetWidth : getmdlSelect.defaultValue.width);
+                getmdlSelect._addEventListeners(i);
+                var width = widthDef ? widthDef : (i.querySelector('.mdl-menu').offsetWidth ? i.querySelector('.mdl-menu').offsetWidth : getmdlSelect._defaultValue.width);
                 i.style.width = width + 'px';
+                componentHandler.upgradeElement(i);
+                componentHandler.upgradeElement(i.querySelector('ul'));
             });
         }
     };
-}());
+}
