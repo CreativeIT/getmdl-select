@@ -33,11 +33,12 @@ Select field.
         </ul>
     </div>
  ```
-
+### Important
+If you want to use more than one getmdl-select item use different ids for inputs and don't forget to change `ul` and `label`'s `for` attributes. It works wrong without this.
 
 ## Configuration options 
 #### Dynamically usage
-For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created. 
+For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created or any new element added to existing list. 
 
 #### Width
 Initial Select takes the default width (300px). If you want that Select automatically adapt to the maximum width add class `getmdl-select__fullwidth`.
