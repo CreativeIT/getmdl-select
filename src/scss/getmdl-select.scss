@@ -30,4 +30,8 @@
     overflow-y: auto;
     max-height: 300px !important;
   }
+  .mdl-menu.mdl-menu--top-left {
+    bottom: auto;
+    top: 0;
+  }
 }
