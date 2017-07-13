@@ -12,15 +12,15 @@ Check out the [example](http://creativeit.github.io/getmdl-select/)
 
 There are three ways to install getmdl-select:
 
- 1. Using [Bower](http://bower.io/):
-    Use this command in your command line: 
-    ```bash
-    bower install getmdl-select
-    ```
- 2. Using [npm](http://npmjs.org/): 
+ 1. Using [npm](http://npmjs.org/): 
     Use this command in your command line: 
     ```bash
     npm install getmdl-select
+    ```
+ 2. Using [Bower](http://bower.io/):
+    Use this command in your command line: 
+    ```bash
+    bower install getmdl-select
     ```
  3. Clone the repo using Git:
 
@@ -45,7 +45,7 @@ To use any MDL component, you must include the minified CSS and JavaScript files
    <link rel="stylesheet" href="your_path_to/material-design-lite/material.min.css">
    <script defer src="your_path_to/material-design-lite/material.min.js"></script>   
    <!--getmdl-select-->   
-   <link rel="stylesheet" href=path_to/getmdl-select/getmdl-select.min.css">
+   <link rel="stylesheet" href="path_to/getmdl-select/getmdl-select.min.css">
    <script defer src="path_to/getmdl-select/getmdl-select.min.js"></script>
    ```
 
@@ -80,3 +80,9 @@ Select automatically adapt to the maximum height. If you want to use small heigh
     
 ## LICENSE
 See the [LICENSE file](https://github.com/CreativeIT/getmdl-select/blob/master/LICENSE.txt) for license rights and limitations (MIT).
+
+## Support the project
+* Star the repo
+* Create issue report or feature request
+* Tweet about it
+* Follow us on Twitter
