@@ -84,5 +84,5 @@ See the [LICENSE file](https://github.com/CreativeIT/getmdl-select/blob/master/L
 ## Support the project
 * Star the repo
 * Create issue report or feature request
-* Tweet about it
-* Follow us on Twitter
+* [Tweet about it](https://twitter.com/CreativeITeam)
+* Follow us on [Twitter](https://twitter.com/CreativeITeam)
