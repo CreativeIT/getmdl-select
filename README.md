@@ -12,7 +12,7 @@ Check out the [example](http://creativeit.github.io/getmdl-select/)
 
 There are three ways to install getmdl-select:
 
- 1. Using [npm](http://npmjs.org/): 
+ 1. Using [npm](http://npmjs.org/):
     Use this command in your command line: 
     ```bash
     npm install getmdl-select
@@ -51,15 +51,19 @@ To use any MDL component, you must include the minified CSS and JavaScript files
 
 ### Example
 
-Select field.
+Simple select field. To see other examples visit [this page](http://creativeit.github.io/getmdl-select/).
  ```html
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-      <input class="mdl-textfield__input" id="country" name="country" value="Belarus" type="text" readonly tabIndex="-1" data-val="BLR"/>
-        <label class="mdl-textfield__label" for="country">Country</label>
-        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
-          <li class="mdl-menu__item" data-val="BLR">Belarus</li>
-          <li class="mdl-menu__item" data-val="RUS">Russia</li>
-        </ul>
+    <div class="mdl-textfield mdl-js-textfield getmdl-select">
+       <input class="mdl-textfield__input" value="" id="country" readonly/>
+       <input value="" type="hidden" name="country"/>
+       <label class="mdl-textfield__label" for="country">Сountry</label>
+       <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
+         <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+         <li class="mdl-menu__item" data-val="BRA">Brazil</li>
+         <li class="mdl-menu__item" data-val="FRA">France</li>
+         <li class="mdl-menu__item" data-val="DEU">Germany</li>
+         <li class="mdl-menu__item" data-val="RUS">Russia</li>
+       </ul>
     </div>
  ```
 ### Important
@@ -72,11 +76,14 @@ For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascri
 #### data-val
 Every `li` should have its own `data-val` attribute. Choosing any element of select you change `input`'s `data-val` property, which you can get using `document.querySelector(selector).getAttribute('data-val');`, where selector is your `input`'s id.
 
+#### Pre-selected item
+To set pre-selected value add `data-selected="true"` attribute to corresponding `li` in your list.
+
 #### Width
-Initial Select takes the default width (300px). If you want that Select automatically adapt to the maximum width add class `getmdl-select__fullwidth`.
+Initial Select takes the default width (300px). You can change it by overriding the CSS property `width`.
 
 #### Height
-Select automatically adapt to the maximum height. If you want to use small height (300px) and see scroll bar, add class `getmdl-select__fix-height`.    
+Options list automatically adapt to the maximum height by content. If you want to use small height (300px) and see scroll bar, add class `getmdl-select__fix-height`.
     
 ## LICENSE
 See the [LICENSE file](https://github.com/CreativeIT/getmdl-select/blob/master/LICENSE.txt) for license rights and limitations (MIT).
