@@ -13,8 +13,7 @@
 
     <link rel="shortcut icon" href="http://www.getmdl.io/assets/favicon.png">
 
-    <!-- Page styles -->
-    <link rel="stylesheet" href="lib/index_mdl/main.css">
+
 
     <!-- Fonts -->
     <link href="lib/index_mdl/font.css" rel="stylesheet" type="text/css">
@@ -26,6 +25,9 @@
 
     <link rel="stylesheet" href="lib/material.min.css">
     <link rel="stylesheet" href="getmdl-select.min.css">
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="lib/index_mdl/main.css">
 </head>
 <body class="components">
 
@@ -80,7 +82,7 @@
                                 <div class="docs-text-styling component-title">
                                     <h3>Select</h3>
 
-                                    <p>Select components.</p>
+                                    <p>Variations on Select.</p>
                                 </div>
                                 <!-- Generating snippets -->
 
@@ -95,89 +97,442 @@
                                                 <div class="snippet-demo-container">
                                                     <!-- Simple Select -->
                                                     <form action="#">
-                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
-                                                            <input id="sample1" class="mdl-textfield__input" value="Belarus" type="text" readonly tabIndex="-1"/>
-                                                            <label class="mdl-textfield__label" for="sample1">Country</label>
-                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="sample1">
-                                                                <li class="mdl-menu__item">Brazil</li>
-                                                                <li class="mdl-menu__item">Germany</li>
-                                                                <li class="mdl-menu__item">Russia</li>
-                                                                <li class="mdl-menu__item">France</li>
-                                                                <li class="mdl-menu__item">Belarus</li>
+                                                        <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                                                            <input class="mdl-textfield__input" value="" id="country1" readonly/>
+                                                            <input value="" type="hidden" name="country1"/>
+                                                            <label class="mdl-textfield__label" for="country1">Country</label>
+                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country1">
+                                                                <li class="mdl-menu__item" data-val="DEU">Germany</li>
+                                                                <li class="mdl-menu__item" data-val="RUS">Russia</li>
+                                                                <li class="mdl-menu__item" data-val="BLR">Belarus</li>
                                                             </ul>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="snippet-demo">
 
+                                                <div class="snippet-demo-container">
+                                                    <!-- Simple Select with arrow-->
+                                                    <form action="#">
+
+                                                        <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                                                            <input class="mdl-textfield__input" value="" id="country2" readonly/>
+                                                            <input value="" type="hidden" name="country2"/>
+                                                            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                                            <label class="mdl-textfield__label" for="country2">Country</label>
+                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country2">
+                                                                <li class="mdl-menu__item" data-val="DEU">Germany</li>
+                                                                <li class="mdl-menu__item" data-val="RUS">Russia</li>
+                                                                <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+                                                            </ul>
                                                         </div>
                                                     </form>
                                                 </div>
                                             </div>
                                             <div class="snippet-demo-padding"></div>
                                         </div>
+                                        <div class="snippet-captions">
+                                            <div class="snippet-caption-padding"></div>
+
+                                            <div class="snippet-caption">
+                                                Simple Select
+                                            </div>
+                                            <div class="snippet-caption">
+                                                Simple Select with arrow
+                                            </div>
+                                            <div class="snippet-caption-padding"></div>
+                                        </div>
                                     </div>
                                     <div class="snippet-code">
-    <pre class=" codepen-button-enabled  language-markup">
-
-        <span
-                class=" language-markup"><span class="token comment"
-                                               spellcheck="true">&lt;!-- Simple Select --&gt;</span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+                                        <pre class=" codepen-button-enabled  language-markup"><code class=" language-markup"><span class="token comment"
+                                           spellcheck="true">&lt;!-- Simple Select --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+            class="token attr-name">class</span><span class="token attr-value"><span
+            class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield getmdl-select<span
+            class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
                 class="token attr-name">class</span><span class="token attr-value"><span
-                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth<span
-                class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
+                class="token punctuation">"</span></span> <span
+                class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample1<span class="token punctuation">"</span></span> <span
+                class="token attr-name">readonly</span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample1<span class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample1<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
+                class="token punctuation">"</span></span></span></span><span class="token tag"><span
+                class="token punctuation">&gt;</span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample1<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span><!-- li-->
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
                     class="token attr-name">class</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
-                    class="token punctuation">"</span></span> <span class="token attr-name">type</span><span
-                    class="token attr-value"><span class="token punctuation">=</span><span
-                    class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
-                    class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
-                    class="token punctuation">"</span>sample1<span class="token punctuation">"</span></span> <span
-                    class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
-                    class="token punctuation">"</span>Belarus<span class="token punctuation">"</span></span> <span
-                    class="token attr-name">readonly</span> <span
-                    class="token attr-name">tabIndex</span><span class="token attr-value"><span class="token punctuation">=</span><span
-                    class="token punctuation">"</span>-1<span class="token punctuation">"</span></span><span
-                    class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
-                    class="token attr-name">for</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>sample1<span
-                    class="token punctuation">"</span> <span
-                    class="token attr-name">class</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
-                    class="token punctuation">"</span></span></span></span><span class="token tag"><span
-                    class="token punctuation">&gt;</span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
-                    class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
-                    class="token attr-name">for</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>sample1<span
-                    class="token punctuation">"</span> <span
-                    class="token attr-name">class</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
                     class="token punctuation">"</span></span><span
-                    class="token punctuation">&gt;</span></span><!-- li-->
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
-                        class="token attr-name">class</span><span class="token attr-value"><span
-                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span><span
-                        class="token punctuation">&gt;</span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
-                    class="token punctuation">&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
-                        class="token attr-name">class</span><span class="token attr-value"><span
-                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span><span
-                        class="token punctuation">&gt;</span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
-                    class="token punctuation">&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
-                        class="token attr-name">class</span><span class="token attr-value"><span
-                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span><span
-                        class="token punctuation">&gt;</span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
-                    class="token punctuation">&gt;</span></span><span class="token tag">
-            <span class="token punctuation">&lt;/</span>ul<span
-                    class="token punctuation">&gt;</span>
-        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
-                    class="token punctuation">&gt;</span></span></span>
-        </code>
-        </pre>
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>DEU<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>BLR<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>RUS<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span><span class="token tag">
+        <span class="token punctuation">&lt;/</span>ul<span
+                class="token punctuation">&gt;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
+                class="token punctuation">&gt;</span></span>
+                                            </code><code class=" language-markup"><span class="token comment"
+                                         spellcheck="true">&lt;!-- Simple Select with arrow --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+            class="token attr-name">class</span><span class="token attr-value"><span
+            class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield getmdl-select<span
+            class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
+                class="token punctuation">"</span></span> <span
+                class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample2<span class="token punctuation">"</span></span> <span
+                class="token attr-name">readonly</span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample2<span class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-icon-toggle__label material-icons<span
+                class="token punctuation">"</span></span><span
+        class="token punctuation">&gt;</span></span></span></span>keyboard_arrow_down<span class="token tag"><span class="token punctuation">&lt;/</span>i<span
+        class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample2<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
+                class="token punctuation">"</span></span></span></span><span class="token tag"><span
+                class="token punctuation">&gt;</span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample2<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span><!-- li-->
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>DEU<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>BLR<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>RUS<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span><span class="token tag">
+        <span class="token punctuation">&lt;/</span>ul<span
+                class="token punctuation">&gt;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
+                class="token punctuation">&gt;</span></span></code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="snippet-group">
+
+                                    <div class="snippet-header">
+                                        <div class="snippet-demos">
+                                            <div class="snippet-demo-padding"></div>
+
+                                            <div class="snippet-demo">
+
+                                                <div class="snippet-demo-container">
+                                                    <!-- Select with floating label-->
+                                                    <form action="#">
+                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                                            <input class="mdl-textfield__input" value="" id="country3" readonly/>
+                                                            <input value="" type="hidden" name="country3"/>
+                                                            <label class="mdl-textfield__label" for="country3">Country</label>
+                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country3">
+                                                                <li class="mdl-menu__item" data-val="DEU">Germany</li>
+                                                                <li class="mdl-menu__item" data-val="RUS">Russia</li>
+                                                                <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+                                                            </ul>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="snippet-demo">
+
+                                                <div class="snippet-demo-container">
+                                                    <!-- Select with floating label and arrow-->
+                                                    <form action="#">
+
+                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                                            <input class="mdl-textfield__input" value="" id="country4" readonly/>
+                                                            <input value="" type="hidden" name="country4"/>
+                                                            <label>
+                                                                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                                            </label>
+                                                            <label class="mdl-textfield__label" for="country4">Country</label>
+                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country4">
+                                                                <li class="mdl-menu__item" data-val="DEU">Germany</li>
+                                                                <li class="mdl-menu__item" data-val="RUS">Russia</li>
+                                                                <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+                                                            </ul>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="snippet-demo-padding"></div>
+                                        </div>
+                                        <div class="snippet-captions">
+                                            <div class="snippet-caption-padding"></div>
+
+                                            <div class="snippet-caption">
+                                                Select with floating label
+                                            </div>
+                                            <div class="snippet-caption">
+                                                Select with floating label and arrow
+                                            </div>
+                                            <div class="snippet-caption-padding"></div>
+                                        </div>
+                                    </div>
+                                    <div class="snippet-code">
+                                        <pre class=" codepen-button-enabled  language-markup"><code class=" language-markup"><span class="token comment"
+                                                                                                                                   spellcheck="true">&lt;!-- Select with floating label --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+            class="token attr-name">class</span><span class="token attr-value"><span
+            class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select<span
+            class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
+                class="token punctuation">"</span></span> <span
+                class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample3<span class="token punctuation">"</span></span> <span
+                class="token attr-name">readonly</span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample3<span class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample3<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
+                class="token punctuation">"</span></span></span></span><span class="token tag"><span
+                                                    class="token punctuation">&gt;</span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
+                                                    class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample3<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span><!-- li-->
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>DEU<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                                                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>BLR<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                                                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>RUS<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                                                    class="token punctuation">&gt;</span></span><span class="token tag">
+        <span class="token punctuation">&lt;/</span>ul<span
+                                                    class="token punctuation">&gt;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
+                                                    class="token punctuation">&gt;</span></span>
+                                            </code><code class=" language-markup"><span class="token comment"
+                                                                                        spellcheck="true">&lt;!-- Select with floating label and arrow --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+            class="token attr-name">class</span><span class="token attr-value"><span
+            class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select<span
+            class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
+                class="token punctuation">"</span></span> <span
+                class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample4<span class="token punctuation">"</span></span> <span
+                class="token attr-name">readonly</span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample4<span class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-icon-toggle__label material-icons<span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span></span></span>keyboard_arrow_down<span class="token tag"><span class="token punctuation">&lt;/</span>i<span
+                                                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample4<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
+                class="token punctuation">"</span></span></span></span><span class="token tag"><span
+                                                    class="token punctuation">&gt;</span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
+                                                    class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample4<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span><!-- li-->
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>DEU<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                                                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>BLR<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                                                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation"> <span
+                    class="token attr-name">data-val</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>RUS<span
+                    class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                                                    class="token punctuation">&gt;</span></span><span class="token tag">
+        <span class="token punctuation">&lt;/</span>ul<span
+                                                    class="token punctuation">&gt;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
+                                                    class="token punctuation">&gt;</span></span></code></pre>
                                     </div>
                                 </div>
 
@@ -192,109 +547,288 @@
 
                                                     <form action="#">
                                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
-                                                            <input id="sample2" class="mdl-textfield__input" value="Belarus" type="text" readonly tabIndex="-1"/>
-                                                            <label for="sample2">
+                                                            <input class="mdl-textfield__input" value="" id="country5" readonly/>
+                                                            <input value="" type="hidden" name="country5"/>
+                                                            <label>
                                                                 <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
                                                             </label>
-                                                            <label class="mdl-textfield__label" for="sample2">Country</label>
-                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="sample2">
-                                                                <li class="mdl-menu__item" data-val="BR">Brazil</li>
-                                                                <li class="mdl-menu__item" data-val="DE">Germany</li>
-                                                                <li class="mdl-menu__item" data-val="RU">Russia</li>
-                                                                <li class="mdl-menu__item" data-val="FR">France</li>
+                                                            <label class="mdl-textfield__label" for="country5">Country</label>
+                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country5">
                                                                 <li class="mdl-menu__item" data-val="BY">Belarus</li>
+                                                                <li class="mdl-menu__item" data-val="BR">Brazil</li>
                                                                 <li class="mdl-menu__item" data-val="ES">Estonia</li>
                                                                 <li class="mdl-menu__item" data-val="FI">Finland</li>
+                                                                <li class="mdl-menu__item" data-val="FR">France</li>
+                                                                <li class="mdl-menu__item" data-val="DE">Germany</li>
                                                                 <li class="mdl-menu__item" data-val="PL">Poland</li>
+                                                                <li class="mdl-menu__item" data-val="RU">Russia</li>
                                                             </ul>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="snippet-demo">
+                                                <div class="snippet-demo-container">
 
+                                                    <form action="#">
+                                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                                                            <input class="mdl-textfield__input" value="" id="country6" readonly/>
+                                                            <input value="" type="hidden" name="country6"/>
+                                                            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                                            <label class="mdl-textfield__label" for="country6">Country</label>
+                                                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country6">
+                                                                <li class="mdl-menu__item" data-val="BY" data-selected="true">Belarus</li>
+                                                                <li class="mdl-menu__item" data-val="BR">Brazil</li>
+                                                                <li class="mdl-menu__item" data-val="ES">Estonia</li>
+                                                                <li class="mdl-menu__item" data-val="FI">Finland</li>
+                                                                <li class="mdl-menu__item" data-val="FR">France</li>
+                                                                <li class="mdl-menu__item" data-val="DE">Germany</li>
+                                                                <li class="mdl-menu__item" data-val="PL">Poland</li>
+                                                                <li class="mdl-menu__item" data-val="RU">Russia</li>
+                                                            </ul>
                                                         </div>
                                                     </form>
                                                 </div>
                                             </div>
                                             <div class="snippet-demo-padding"></div>
                                         </div>
+                                        <div class="snippet-captions">
+                                            <div class="snippet-caption-padding"></div>
+                                            <div class="snippet-caption">
+                                                Select with fixed height
+                                            </div>
+                                            <div class="snippet-caption">
+                                                Pre-selected value
+                                            </div>
+                                            <div class="snippet-caption-padding"></div>
+                                        </div>
                                     </div>
                                     <div class="snippet-code">
-    <pre class=" codepen-button-enabled  language-markup">
-        <code
+    <pre class="codepen-button-enabled
+    language-markup"><code
                 class=" language-markup"><span class="token comment"
-                                               spellcheck="true">&lt;!-- Select with arrow--&gt;</span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+                                               spellcheck="true">&lt;!-- Select with fixed height --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+            class="token attr-name">class</span><span class="token attr-value"><span
+            class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height<span
+            class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
                 class="token attr-name">class</span><span class="token attr-value"><span
-                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height<span
-                class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
+                class="token punctuation">"</span></span> <span
+                class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample5<span class="token punctuation">"</span></span> <span
+                class="token attr-name">readonly</span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample5<span class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-icon-toggle__label material-icons<span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span></span></span>keyboard_arrow_down<span class="token tag"><span class="token punctuation">&lt;/</span>i<span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample5<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
+                class="token punctuation">"</span></span></span></span><span class="token tag"><span
+                    class="token punctuation">&gt;</span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
+                    class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample5<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span><!-- li-->
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
                     class="token attr-name">class</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
-                    class="token punctuation">"</span></span> <span class="token attr-name">type</span><span
-                    class="token attr-value"><span class="token punctuation">=</span><span
-                    class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
-                    class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
-                    class="token punctuation">"</span>sample2<span class="token punctuation">"</span></span> <span
-                    class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
-                    class="token punctuation">"</span>Belarus<span class="token punctuation">"</span></span> <span
-                    class="token attr-name">readonly</span> <span
-                    class="token attr-name">tabIndex</span><span class="token attr-value"><span class="token punctuation">=</span><span
-                    class="token punctuation">"</span>-1<span class="token punctuation">"</span></span><span
-                    class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
-                    class="token attr-name">for</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>sample2<span
-                    class="token punctuation">"</span></span><span
-                    class="token punctuation">&gt;</span></span>
-                <span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+              class="token attr-value"><span class="token punctuation">="</span>BY<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
                     class="token attr-name">class</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-icon-toggle__label material-icons<span
-                    class="token punctuation">"</span><span
-                    class="token punctuation">&gt;</span></span>keyboard_arrow_down<span class="token tag"><span class="token punctuation">&lt;/</span>i<span
-                    class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span
-                    class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
-                    class="token attr-name">for</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>sample2<span
-                    class="token punctuation">"</span> <span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+              class="token attr-value"><span class="token punctuation">="</span>BR<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Brazil<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
                     class="token attr-name">class</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
-                    class="token punctuation">"</span></span></span><span class="token tag"><span
-                    class="token punctuation">&gt;</span></span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
-                    class="token punctuation">&gt;</span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
-                    class="token attr-name">for</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>sample2<span
-                    class="token punctuation">"</span> <span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+              class="token attr-value"><span class="token punctuation">="</span>ES<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Estonia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
                     class="token attr-name">class</span><span class="token attr-value"><span
-                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
-                    class="token punctuation">"</span></span><span
-                    class="token punctuation">&gt;</span></span><!-- li-->
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
-                        class="token attr-name">class</span><span class="token attr-value"><span
-                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
-                  class="token attr-value"><span class="token punctuation">="</span>DE<span class="token punctuation">"</span></span><span
-                        class="token punctuation">&gt;</span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>FI<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Finland<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
                     class="token punctuation">&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
-                        class="token attr-name">class</span><span class="token attr-value"><span
-                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
-                  class="token attr-value"><span class="token punctuation">="</span>BY<span class="token punctuation">"</span></span><span
-                        class="token punctuation">&gt;</span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>FR<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>France<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
                     class="token punctuation">&gt;</span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
-                        class="token attr-name">class</span><span class="token attr-value"><span
-                        class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
-                        class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
-                  class="token attr-value"><span class="token punctuation">="</span>RU<span class="token punctuation">"</span></span><span
-                        class="token punctuation">&gt;</span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>DE<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>PL<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Poland<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                    class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>RU<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
                     class="token punctuation">&gt;</span></span><span class="token tag">
-            <span class="token punctuation">&lt;/</span>ul<span
-                    class="token punctuation">&gt;</span>
-        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
-                    class="token punctuation">&gt;</span></span></span>
-        </code>
-        </pre>
+        <span class="token punctuation">&lt;/</span>ul<span
+                class="token punctuation">&gt;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
+                    class="token punctuation">&gt;</span></span></span></code>
+        <code
+            class=" language-markup"><span class="token comment"
+                                           spellcheck="true">&lt;!-- Pre-selected value --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span
+            class="token attr-name">class</span><span class="token attr-value"><span
+            class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height<span
+            class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__input<span
+                class="token punctuation">"</span></span> <span
+                class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample6<span class="token punctuation">"</span></span> <span
+                class="token attr-name">readonly</span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span
+                class="token attr-name">type</span><span
+                class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span
+                class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span><span class="token punctuation">"</span></span> <span
+                class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span
+                class="token punctuation">"</span>sample6<span class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-icon-toggle__label material-icons<span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span></span></span>keyboard_arrow_down<span class="token tag"><span class="token punctuation">&lt;/</span>i<span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample6<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-textfield__label<span
+                class="token punctuation">"</span></span></span></span><span class="token tag"><span
+                class="token punctuation">&gt;</span></span>Country<span class="token tag"><span class="token punctuation">&lt;/</span>label<span
+                class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span
+                class="token attr-name">for</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>sample6<span
+                class="token punctuation">"</span> <span
+                class="token attr-name">class</span><span class="token attr-value"><span
+                class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu mdl-menu--bottom-left mdl-js-menu</span><span
+                class="token punctuation">"</span></span><span
+                class="token punctuation">&gt;</span></span><!-- li-->
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>BY<span class="token punctuation">"</span></span> <span
+                    class="token attr-name">data-selected</span><span class="token attr-value"><span
+                    class="token punctuation">="</span>true<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Belarus<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>BR<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Brazil<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>ES<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Estonia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>FI<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Finland<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>FR<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>France<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>DE<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Germany<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>PL<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Poland<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span
+                    class="token attr-name">class</span><span class="token attr-value"><span
+                    class="token punctuation">=</span><span class="token punctuation">"</span>mdl-menu__item<span
+                    class="token punctuation">"</span></span> <span class="token attr-name">data-val</span><span
+                    class="token attr-value"><span class="token punctuation">="</span>RU<span class="token punctuation">"</span></span><span
+                    class="token punctuation">&gt;</span></span>Russia<span class="token tag"><span class="token punctuation">&lt;/</span>li<span
+                class="token punctuation">&gt;</span></span><span class="token tag">
+        <span class="token punctuation">&lt;/</span>ul<span
+                class="token punctuation">&gt;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span
+                class="token punctuation">&gt;</span></span></span></code></pre>
                                     </div></div>
 
 
@@ -327,11 +861,6 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                      <td><code>getmdl-select__fullwidth</code></td>
-                                      <td>Change auto width to default 300px</td>
-                                      <td>Required</td>
-                                    </tr>
                                     <tr>
                                       <td><code>getmdl-select__fix-height</code></td>
                                       <td>Limits height to 300px and add vertically scrollbar</td>
@@ -373,9 +902,9 @@
 </div>
 
 
-<script src="lib/material.min.js"></script>
-<script src="getmdl-select.min.js"></script>
-<script src="lib/index_mdl/main.js"></script>
+<script defer src="lib/material.min.js"></script>
+<script defer src="getmdl-select.min.js"></script>
+<script defer src="lib/index_mdl/main.js"></script>
 
 </body>
 </html>
