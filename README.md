@@ -74,7 +74,8 @@ If you want to use more than one getmdl-select item use different ids for inputs
 For dynamically usage, you must add `getmdlSelect.init(cssSelector)` in javascript code, (where cssSelector, for example, is `".getmdl-select"` or `"#mySelect"`), after new item is created or any new element added to existing list. 
 
 #### data-val
-Every `li` should have its own `data-val` attribute. Choosing any element of select you change `input`'s `data-val` property, which you can get using `document.querySelector(selector).getAttribute('data-val');`, where selector is your `input`'s id.
+Every `li` should have its own `data-val` attribute. Choosing any element of select you change `value` of hidden `input` as `data-val` property of corresponding
+`li`. Also you change `value` of readonly `input` to `li.textContent`. Then after form submit, next pair `hiddenInputName=hiddenInputValue` will send to server side.
 
 #### Pre-selected item
 To set pre-selected value add `data-selected="true"` attribute to corresponding `li` in your list.
