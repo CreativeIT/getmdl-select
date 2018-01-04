@@ -1,12 +1,12 @@
     
 # getmdl-select
-Material Design Lite selectfield component [material-design-lite](https://github.com/google/material-design-lite)
+Material Design Lite selectfield component for [material-design-lite](https://github.com/google/material-design-lite)
 
-## Live Example
+## Live example
 
 ![alt tag](https://raw.github.com/CreativeIT/getmdl-select/gh-pages/lib/index_mdl/select_mdl.gif)
 
-Check out the [example](http://creativeit.github.io/getmdl-select/)
+Check out the [DEMO](http://creativeit.github.io/getmdl-select/)
 
 ## Install
 
@@ -28,9 +28,8 @@ There are three ways to install getmdl-select:
     git clone https://github.com/CreativeIT/getmdl-select.git
     ```
     
-    (Alternatively you can [download](https://github.com/CreativeIT/getmdl-select/archive/master.zip)
-this repository.)
-    And then:
+    Alternatively you can [download](https://github.com/CreativeIT/getmdl-select/archive/master.zip)
+this repository and then:
     
     ```bash
     cd getmdl-select   
@@ -87,7 +86,10 @@ Initial Select takes the default width (300px). You can change it by overriding 
 Options list automatically adapt to the maximum height by content. If you want to use small height (300px) and see scroll bar, add class `getmdl-select__fix-height`.
     
 ## LICENSE
-See the [LICENSE file](https://github.com/CreativeIT/getmdl-select/blob/master/LICENSE.txt) for license rights and limitations (MIT).
+See the [LICENSE file](https://github.com/CreativeIT/getmdl-select/blob/master/LICENSE.txt)(MIT).
+
+## Hire us
+We are ready to bring value to your business. Visit our site [creativeit.io](http://creativeit.io/) or drop us a line <hello@creativeit.io>. We will be happy to help you!
 
 ## Support the project
 * Star the repo
