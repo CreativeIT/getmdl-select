@@ -55,7 +55,7 @@ Simple select field. To see other examples visit [this page](http://creativeit.g
     <div class="mdl-textfield mdl-js-textfield getmdl-select">
        <input class="mdl-textfield__input" value="" id="country" readonly/>
        <input value="" type="hidden" name="country"/>
-       <label class="mdl-textfield__label" for="country">Сountry</label>
+       <label class="mdl-textfield__label" for="country">Country</label>
        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
          <li class="mdl-menu__item" data-val="BLR">Belarus</li>
          <li class="mdl-menu__item" data-val="BRA">Brazil</li>
