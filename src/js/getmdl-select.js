@@ -1,18 +1,13 @@
 {
     'use strict';
-    (function () {
+    (function() {
         function whenLoaded() {
             getmdlSelect.init('.getmdl-select');
         };
-
-        window.addEventListener ?
-            window.addEventListener("load", whenLoaded, false) :
-            window.attachEvent && window.attachEvent("onload", whenLoaded);
-
+        window.addEventListener ? window.addEventListener("load", whenLoaded, false) : window.attachEvent && window.attachEvent("onload", whenLoaded);
     }());
-
     var getmdlSelect = {
-        _addEventListeners: function (dropdown) {
+        _addEventListeners: function(dropdown) {
             var input = dropdown.querySelector('input');
             var hiddenInput = dropdown.querySelector('input[type="hidden"]');
             var list = dropdown.querySelectorAll('li');
@@ -22,25 +17,21 @@
             var previousValue = '';
             var previousDataVal = '';
             var opened = false;
-
-            var setSelectedItem = function (li) {
+            var setSelectedItem = function(li) {
                 var value = li.textContent.trim();
                 input.value = value;
-                list.forEach(function (li) {
+                list.forEach(function(li) {
                     li.classList.remove('selected');
                 });
                 li.classList.add('selected');
                 dropdown.MaterialTextfield.change(value); // handles css class changes
-                setTimeout(function () {
+                setTimeout(function() {
                     dropdown.MaterialTextfield.updateClasses_(); //update css class
                 }, 250);
-
                 // update input with the "id" value
                 hiddenInput.value = li.dataset.val || '';
-
                 previousValue = input.value;
                 previousDataVal = hiddenInput.value;
-
                 if ("createEvent" in document) {
                     var evt = document.createEvent("HTMLEvents");
                     evt.initEvent("change", false, true);
@@ -50,8 +41,7 @@
                     input.fireEvent("onchange");
                 }
             }
-
-            var hideAllMenus = function () {
+            var hideAllMenus = function() {
                 opened = false;
                 input.value = previousValue;
                 hiddenInput.value = previousDataVal;
@@ -59,16 +49,15 @@
                     dropdown.classList.remove('is-focused');
                 }
                 var menus = document.querySelectorAll('.getmdl-select .mdl-js-menu');
-                [].forEach.call(menus, function (menu) {
+                [].forEach.call(menus, function(menu) {
                     menu['MaterialMenu'].hide();
                 });
                 var event = new Event('closeSelect');
                 menu.dispatchEvent(event);
             };
             document.body.addEventListener('click', hideAllMenus, false);
-
             //hide previous select after press TAB
-            dropdown.onkeydown = function (event) {
+            dropdown.onkeydown = function(event) {
                 if (event.keyCode == 9) {
                     input.value = previousValue;
                     hiddenInput.value = previousDataVal;
@@ -76,20 +65,17 @@
                     dropdown.classList.remove('is-focused');
                 }
             };
-
             //show select if it have focus
-            input.onfocus = function (e) {
+            input.onfocus = function(e) {
                 menu['MaterialMenu'].show();
                 menu.focus();
                 opened = true;
             };
-
-            input.onblur = function (e) {
+            input.onblur = function(e) {
                 e.stopPropagation();
             };
-
             //hide all old opened selects and opening just clicked select
-            input.onclick = function (e) {
+            input.onclick = function(e) {
                 e.stopPropagation();
                 if (!menu.classList.contains('is-visible')) {
                     menu['MaterialMenu'].show();
@@ -101,8 +87,7 @@
                     opened = false;
                 }
             };
-
-            input.onkeydown = function (event) {
+            input.onkeydown = function(event) {
                 if (event.keyCode == 27) {
                     input.value = previousValue;
                     hiddenInput.value = previousDataVal;
@@ -114,8 +99,19 @@
                     }
                 }
             };
-
-            menu.addEventListener('closeSelect', function (e) {
+            input.setValue = function(value) {
+                var textProp = 'textContent' in document ? 'textContent' : 'innerText';
+                // directly converting the found 'a' elements into an Array,
+                // then iterating over that array with Array.prototype.forEach():
+                [].slice.call(document.querySelectorAll('li'), 0).forEach(function(aEl) {
+                    // if the text of the aEl Node contains the text 'link1':
+                    if (aEl[textProp].indexOf(value) > -1) {
+                        // we update its style:
+                        setSelectedItem(aEl)
+                    }
+                });
+            }
+            menu.addEventListener('closeSelect', function(e) {
                 input.value = previousValue;
                 hiddenInput.value = previousDataVal;
                 dropdown.classList.remove('is-focused');
@@ -124,9 +120,8 @@
                     label = '';
                 }
             });
-
             //set previous value and data-val if ESC was pressed
-            menu.onkeydown = function (event) {
+            menu.onkeydown = function(event) {
                 if (event.keyCode == 27) {
                     input.value = previousValue;
                     hiddenInput.value = previousDataVal;
@@ -137,9 +132,8 @@
                     }
                 }
             };
-
             if (arrow) {
-                arrow.onclick = function (e) {
+                arrow.onclick = function(e) {
                     e.stopPropagation();
                     if (opened) {
                         menu['MaterialMenu'].hide();
@@ -157,9 +151,8 @@
                     }
                 };
             }
-
-            [].forEach.call(list, function (li) {
-                li.onfocus = function () {
+            [].forEach.call(list, function(li) {
+                li.onfocus = function() {
                     dropdown.classList.add('is-focused');
                     var value = li.textContent.trim();
                     input.value = value;
@@ -168,19 +161,17 @@
                         dropdown.querySelector('.mdl-textfield__label').textContent = '';
                     }
                 };
-
-                li.onclick = function () {
+                li.onclick = function() {
                     setSelectedItem(li);
                 };
-
                 if (li.dataset.selected) {
                     setSelectedItem(li);
                 }
             });
         },
-        init: function (selector) {
+        init: function(selector) {
             var dropdowns = document.querySelectorAll(selector);
-            [].forEach.call(dropdowns, function (dropdown) {
+            [].forEach.call(dropdowns, function(dropdown) {
                 getmdlSelect._addEventListeners(dropdown);
                 componentHandler.upgradeElement(dropdown);
                 componentHandler.upgradeElement(dropdown.querySelector('ul'));
