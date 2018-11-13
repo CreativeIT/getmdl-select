@@ -53,8 +53,8 @@
 
             var hideAllMenus = function () {
                 opened = false;
-                input.value = previousValue;
-                hiddenInput.value = previousDataVal;
+                //input.value = previousValue;
+                //hiddenInput.value = previousDataVal;
                 if (!dropdown.querySelector('.mdl-menu__container').classList.contains('is-visible')) {
                     dropdown.classList.remove('is-focused');
                 }
@@ -116,8 +116,8 @@
             };
 
             menu.addEventListener('closeSelect', function (e) {
-                input.value = previousValue;
-                hiddenInput.value = previousDataVal;
+                //input.value = previousValue;
+                //hiddenInput.value = previousDataVal;
                 dropdown.classList.remove('is-focused');
                 if (label !== '') {
                     dropdown.querySelector('.mdl-textfield__label').textContent = label;
