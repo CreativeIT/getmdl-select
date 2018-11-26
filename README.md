@@ -42,7 +42,7 @@ To use any MDL component, you must include the minified CSS and JavaScript files
    <!-- getmdl -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
    <link rel="stylesheet" href="your_path_to/material-design-lite/material.min.css">
-   <script defer src="your_path_to/material-design-lite/material.min.js"></script>   
+   <script src="your_path_to/material-design-lite/material.min.js"></script>   
    <!--getmdl-select-->   
    <link rel="stylesheet" href="path_to/getmdl-select/getmdl-select.min.css">
    <script defer src="path_to/getmdl-select/getmdl-select.min.js"></script>
