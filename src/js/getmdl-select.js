@@ -173,7 +173,7 @@
                     setSelectedItem(li);
                 };
 
-                if (li.dataset.selected) {
+                if (li.dataset.selected === 'true') {
                     setSelectedItem(li);
                 }
             });
