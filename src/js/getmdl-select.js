@@ -26,7 +26,7 @@
             var setSelectedItem = function (li) {
                 var value = li.textContent.trim();
                 input.value = value;
-                list.forEach(function (li) {
+                [].forEach.call(list, function (li) {
                     li.classList.remove('selected');
                 });
                 li.classList.add('selected');
