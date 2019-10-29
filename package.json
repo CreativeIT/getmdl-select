@@ -18,7 +18,7 @@
   "author": "CreativeIT",
   "homepage": "https://github.com/CreativeIT/getmdl-select#readme",
   "devDependencies": {
-    "bower": "1.5.2",
+    "bower": "1.8.8",
     "gulp": "3.9.0",
     "gulp-rename": "1.2.2",
     "gulp-sass": "2.0.4",
